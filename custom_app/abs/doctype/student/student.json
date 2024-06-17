@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2024-06-13 11:00:56.250062",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "firstname",
+  "middlename",
+  "lastname",
+  "email",
+  "fullname",
+  "create_user",
+  "naming_series",
+  "column_break_exom",
+  "gender",
+  "dob",
+  "bloodgroup",
+  "nationality",
+  "isactive",
+  "date_of_joining",
+  "address",
+  "combined_address"
+ ],
+ "fields": [
+  {
+   "fieldname": "firstname",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "lastname",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "middlename",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "fullname",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": ".firstname.-.YYYY.-.DD.-.####\n.lastname.-.YYYY.-.YY.-.####\n.fullname.-.YYYY.-.MM.-.####"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_exom",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOthers"
+  },
+  {
+   "fieldname": "bloodgroup",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "A+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+  },
+  {
+   "default": "Indian",
+   "fieldname": "nationality",
+   "fieldtype": "Select",
+   "label": "Nationality",
+   "options": "Afghan\nAlbanian\nAlgerian\nAndorran\nAngolan\nAntiguan or Barbudan\nArgentine\nArmenian\nAustralian\nAustrian\nAzerbaijani\nBahamian\nBahraini\nBangladeshi\nBarbadian\nBelarusian\nBelgian\nBelizean\nBeninese\nBhutanese\nBolivian\nBosnian or Herzegovinian\nBatswana\nBrazilian\nBruneian\nBulgarian\nBurkinabe\nBurundian\nCabo Verdean\nCambodian\nCameroonian\nCanadian\nCentral African\nChadian\nChilean\nChinese\nColombian\nComoran\nCongolese (Democratic Republic of the Congo)\nCongolese (Republic of the Congo)\nCosta Rican\nCroatian\nCuban\nCypriot\nCzech\nDanish\nDjiboutian\nDominican (Dominica)\nDominican (Dominican Republic)\nTimorese\nEcuadorian\nEgyptian\nSalvadoran\nEquatorial Guinean\nEritrean\nEstonian\nSwazi\nEthiopian\nFijian\nFinnish\nFrench\nGabonese\nGambian\nGeorgian\nGerman\nGhanaian\nGreek\nGrenadian\nGuatemalan\nGuinean\nBissau-Guinean\nGuyanese\nHaitian\nHonduran\nHungarian\nIcelandic\nIndian\nIndonesian\nIranian\nIraqi\nIrish\nIsraeli\nItalian\nIvorian\nJamaican\nJapanese\nJordanian\nKazakh\nKenyan\nKiribati\nNorth Korean\nSouth Korean\nKosovar\nKuwaiti\nKyrgyz\nLao\nLatvian\nLebanese\nBasotho\nLiberian\nLibyan\nLiechtensteiner\nLithuanian\nLuxembourger\nMalagasy\nMalawian\nMalaysian\nMaldivian\nMalian\nMaltese\nMarshallese\nMauritanian\nMauritian\nMexican\nMicronesian\nMoldovan\nMonacan\nMongolian\nMontenegrin\nMoroccan\nMozambican\nBurmese\nNamibian\nNauruan\nNepali\nDutch\nNew Zealander\nNicaraguan\nNigerien\nNigerian\nNorth Macedonian\nNorwegian\nOmani\nPakistani\nPalauan\nPalestinian\nPanamanian\nPapua New Guinean\nParaguayan\nPeruvian\nFilipino\nPolish\nPortuguese\nQatari\nRomanian\nRussian\nRwandan\nKittitian or Nevisian\nSaint Lucian\nVincentian\nSamoan\nSan Marinese\nSao Tomean\nSaudi\nSenegalese\nSerbian\nSeychellois\nSierra Leonean\nSingaporean\nSlovak\nSlovene\nSolomon Islander\nSomali\nSouth African\nSouth Sudanese\nSpanish\nSri Lankan\nSudanese\nSurinamese\nSwedish\nSwiss\nSyrian\nTaiwanese\nTajik\nTanzanian\nThai\nTogolese\nTongan\nTrinidadian or Tobagonian\nTunisian\nTurkish\nTurkmen\nTuvaluan\nUgandan\nUkrainian\nEmirati\nBritish\nAmerican\nUruguayan\nUzbek\nVanuatuan\nVenezuelan\nVietnamese\nYemeni\nZambian\nZimbabwean",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "default": "0",
+   "fieldname": "isactive",
+   "fieldtype": "Check",
+   "label": "Activity Status"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "is_virtual": 1,
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "create_user",
+   "fieldtype": "Button",
+   "label": "Create User"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "combined_address",
+   "fieldtype": "HTML",
+   "label": "Combined Address"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-17 10:49:00.847573",
+ "modified_by": "Administrator",
+ "module": "abs",
+ "name": "Student",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
