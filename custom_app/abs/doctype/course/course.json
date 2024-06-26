@@ -38,12 +38,12 @@
    "fieldname": "topics",
    "fieldtype": "Table",
    "label": "Topics",
-   "options": "Topics"
+   "options": "Topic"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-17 11:25:40.965691",
+ "modified": "2024-06-19 15:38:36.497512",
  "modified_by": "Administrator",
  "module": "abs",
  "name": "Course",

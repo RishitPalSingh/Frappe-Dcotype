@@ -1,0 +1,21 @@
+{
+ "creation": "2024-06-26 15:55:48.350972",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "null",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Total Sale Order",
+ "method": "custom_app.numbercard.totalSalesOrder",
+ "modified": "2024-06-26 15:55:48.350972",
+ "modified_by": "Administrator",
+ "module": "abs",
+ "name": "Total Sale Order",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Custom"
+}

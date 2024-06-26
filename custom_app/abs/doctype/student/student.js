@@ -9,8 +9,6 @@ frappe.ui.form.on("Student", {
     },
     create_user(frm)
         {
-            
-            // Create the new user via Frappe's API
             console.log(frm.doc)
             frappe.call({
                 method: 'frappe.client.insert',
@@ -46,20 +44,9 @@ frappe.ui.form.on("Student", {
                 }
             }
             
-                frappe.call({
-                    method: 'custom_app.abs.doctype.student.student.get_combined_address',
-                    args: {
-                        student: frm.doc.address
-                    },
-                    callback: function(r) {
-                        if (r.message) {
-                            frm.set_value('combined_address_html', r.message);
-                            console.log(r.message)
-                        }
-                    }
-                });
+                
             
-        },
+        }
     
  
 });
