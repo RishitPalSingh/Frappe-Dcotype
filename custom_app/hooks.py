@@ -115,7 +115,7 @@ app_license = "mit"
 # Override standard doctype classes
 
 override_doctype_class = {
-	"Sales Order": "custom_app.custom_app.override.CustomSO"
+	# "Sales Order": "custom_app.override.CustomSO"
 }
 
 # Document Events
@@ -132,23 +132,28 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"custom_app.tasks.all"
-# 	],
-# 	"daily": [
-# 		"custom_app.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"custom_app.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"custom_app.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"custom_app.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"custom_app.tasks.all"
+	# ],
+	# "daily": [
+	# 	"custom_app.tasks.daily"
+	# ],
+	# "hourly": [
+	# 	"custom_app.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"custom_app.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"custom_app.tasks.monthly"
+	# ],
+  "cron": {
+    "*/1 * * * *": [
+        "custom_app.tasks.customScheduler"
+    ]
+}
+}
 
 # Testing
 # -------

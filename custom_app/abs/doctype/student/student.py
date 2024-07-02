@@ -1,13 +1,21 @@
-from frappe.model.document import Document
 import frappe
+from frappe.model.document import Document
+
 class Student(Document):
-      pass
-# @frappe.whitelist()
-# def get_combined_address(student):
-#         combined_address = ""
-#         addresses = frappe.get_all('Address', filters={'address_line1': student}, fields=['address_line1', 'address_line2', 'city', 'state', 'country', 'pincode'])
+    def after_insert(self):
+        self.notify_admin_on_creation()
 
-#         for addr in addresses:
-#             combined_address += f"{addr.get('address_line1', '')}, {addr.get('address_line2', '')}, {addr.get('city', '')}, {addr.get('state', '')}, {addr.get('country', '')}, {addr.get('pincode', '')}<br>"
-
-#         return combined_address
+    def notify_admin_on_creation(self):
+        admin_email = "admin@example.com"  # Replace with the actual admin email
+        subject = f"New Student Created: {self.firstname} {self.lastname}"
+        message = f"""
+        A new student has been created in the system:
+        Name: {self.firstname} {self.middlename} {self.lastname}
+        Email: {self.email}
+        """
+        print(frappe.sendmail(
+            recipients=[self.email],
+            subject=subject,
+            message=message,
+            delayed=False
+        ))

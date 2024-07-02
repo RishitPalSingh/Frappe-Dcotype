@@ -3,10 +3,11 @@
 
 
 import frappe
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def get_user():
     data=frappe.get_all('User', fields=['*'])
     return data
+
 @frappe.whitelist()
 def create_user():
     try:
@@ -22,6 +23,7 @@ def create_user():
         return data
     except Exception as e:
         raise frappe.error_log(500,"Error creating user: {e}")
+    
 @frappe.whitelist()
 def update_user():
     try:
